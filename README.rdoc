@@ -1,0 +1,5 @@
+== README
+
+* The Private-Events from the Odin Poject --http://www.theodinproject.com/ruby-on-rails/associations
+
+* Emulating the EventBrite model of event planning and attending.
