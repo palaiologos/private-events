@@ -1,0 +1,39 @@
+<div class='row'>
+  <div class='col-md-4'>
+	  <div class="panel panel-info">
+	    <div class='panel-heading'>
+		    <h4 class='text-primary'><%= @user.name %></h4>
+	    </div>
+	    <div class='panel-body'>
+		    Lorem ipsum text.
+	    </div>
+	  </div>
+  </div>
+  <div class='col-md-8'>
+	  <h4 class='text-primary events-heading'>My events(<%= @user.created_events.count%>)</h4>
+	  <% if @events.any? %>
+	    <%= render @events %>
+	  <% else %>
+	    <h4 class="text-warning">This user has no events yet!</h4>
+	  <% end %>
+	  <%= will_paginate @events %>
+  </div>
+</div>
+<div class='row draw-line'>
+  <div class='col-md-6'>
+	  <% if @upcoming_events.any? %>
+	    <h4 class='text-primary events-heading'>Upcoming events(<%= @upcoming_events.count %>)</h4>
+	    <%= render @upcoming_events %>
+	  <% else %>
+	    <h4 class='text-warning events-heading'>You have no upcoming events</h4>
+	  <% end %>
+  </div>
+  <div class='col-md-6'>
+	  <% if @past_events.any? %>
+	    <h4 class='text-primary events-heading'>Past events(<%= @past_events.count %>)</h4>
+	    <%= render @past_events %>
+	  <% else %>
+	    <h4 class='text-warning events-heading'>You have no past events</h4>
+  	<% end %>
+  </div>
+</div>

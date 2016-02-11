@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <h1 class='text-info'>Private-Events, based on EventBrite</h1>
+  <p>
+	  Create a new event, join an existing one or just browse and enjoy!
+  </p>
+  <center>
+	  <% if logged_in? %>
+	    <%= link_to "Create an event!", new_event_path, class: "btn btn-lg btn-info"  %>
+	  <% else %>
+	    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-info" %>
+	  <% end %>
+  </center>
+</div>
