@@ -1,0 +1,3 @@
+<%= form_for(current_user.invites.find_by(attended_event_id: @event.id), html: { method: :delete }) do |f| %>
+  <%= f.submit "Unattend event", class: "form-control btn btn-danger center" %>
+<% end %>

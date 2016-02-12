@@ -1,0 +1,9 @@
+<% unless current_user?(User.find(@event.creator_id)) %>
+  <div id='attend_form'>
+	<% if @event.attendees.include?(current_user) %>
+	  <%= render 'unattend' %>
+	<% else %>
+	  <%= render 'attend' %>
+	<% end %>
+  </div>
+<% end %>
