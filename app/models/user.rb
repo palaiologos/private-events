@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   attr_accessor :remember_token
 
   # Associations.
-  belongs_to :creator, class_name: "User"
+  has_many :created_events, class_name: "Event", foreign_key: :creator_id
   has_many :attended_events, through: :invites
   has_many :invites, foreign_key: :attendee_id
 

@@ -1,0 +1,110 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.draw-line{
+  border-top: 1px solid #eaeaea;
+  margin-top: 20px;
+}
+/* footer */
+.not-fixed{
+  margin-top: 60px;
+}
+
+.sep-fixed{
+  margin-top: 5px;
+}
+
+.footer{
+  border-top: 1px solid #eaeaea;
+}
+
+.my-footer{
+  margin-top: 5px;
+  // background-color: #eaeaea;
+}
+
+.my-footer > p, small{
+  margin-right: 5px;
+}
+
+
+/* events */
+.events{
+  list-style: none;
+}
+
+.center-pagination{
+  margin-left: auto;
+  margin-right: auto;
+}
+.events-heading{
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+}
+.event{
+  border-top: 1px solid #eaeaea;
+}
+.event-title{
+  margin-top: 15px;
+}
+.event-description{
+  border-top: 1px solid #eaeaea;
+  margin-top: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space:wrap;
+  overflow: hidden;
+}
+.event-date{
+  font-weight: normal;
+  color: $gray-light;
+  margin-left: 10px;
+}
+.loc-time{
+  padding: 3px;
+  background-color: #e8e8e8;
+  margin-bottom: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.white-heading{
+  color: $gray-light;
+}
+
+.center{
+  text-align: center;
+  margin-bottom: 40px;
+}

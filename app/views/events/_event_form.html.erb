@@ -2,13 +2,13 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.label :title %>
-  <%= f.text_field :title, class: 'form-control', placeholder: 'Ruby meetup' %>
+  <%= f.text_field :title, class: 'form-control', placeholder: 'Title' %>
 
   <%= f.label :description %>
-  <%= f.text_area :description, class: 'form-control', rows: 7, placeholder: 'Is a meetup to talk about the Ruby programming language and it\'s applications' %>
+  <%= f.text_area :description, class: 'form-control', rows: 7, placeholder: 'Description' %>
 
   <%= f.label :location %>
-  <%= f.text_field :location, class: 'form-control', placeholder: 'Some place!' %>
+  <%= f.text_field :location, class: 'form-control', placeholder: 'Location' %>
 
   <%= f.label :date %>
   <%= f.datetime_select :date, class: 'form-control' %>

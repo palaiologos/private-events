@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.created_events.build(user_params)
+    @event = current_user.created_events.build(event_params)
     if @event.save
       flash.now[:success] = "Created"
       render 'show'
