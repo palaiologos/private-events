@@ -3,7 +3,8 @@ class User < ActiveRecord::Base
 
   # Associations.
   belongs_to :creator, class_name: "User"
-
+  has_many :attended_events, through: :invites
+  has_many :invites, foreign_key: :attendee_id
 
   # Callbacks
 
@@ -44,9 +45,17 @@ class User < ActiveRecord::Base
   end
 
  # Forgets a user
- def forget
-   update_attribute(:remember_digest, nil)
- end
+  def forget
+    update_attribute(:remember_digest, nil)
+  end
+
+  def upcoming_events
+	  self.attended_events.to_a.select { |event| event.date > Time.zone.now }
+  end
+
+  def past_events
+	  self.attended_events.to_a.select { |event| event.date < Time.zone.now }
+  end
 
 
 
